@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css"/>
+
+    <link rel="stylesheet" href="css/bj.youtubesearch.css"/>
+  </head>
+  <body>
+    <div class="container video-main">
+      <div class="video-results" id="video-selected-preview">
+        <!-- display currently selected video here -->
+      </div>
+
+      <h2>Insert YouTube Video</h2>
+      <div class="well">
+        <input id="search-query" type="text" class="form-control" placeholder="Search"/>
+        <button id="search-button" disabled="true" class="btn btn-default">Search</button>
+      </div>
+
+      <ul class="pager">
+        <li class="previous disabled"><a href="#">&larr; Less</a></li>
+        <li class="next disabled"><a href="#">More &rarr;</a></li>
+      </ul> 
+
+      <div class="video-results" id="results">
+        <!-- video-results-template will render here -->
+      </div>
+
+      <ul class="pager">
+        <li class="previous disabled"><a href="#">&larr; Less</a></li>
+        <li class="next disabled"><a href="#">More &rarr;</a></li>
+      </ul>
+
+    </div>
+
+    <script id="video-results-template" type="text/dust-template">
+      {#items}
+        <div class="video-result {id.videoId}" data-id="{id.videoId}">
+          <div class="video-thumbnail">
+            <a class="video-autoplay" title="{snippet.title}" href="http://www.youtube.com/v/{id.videoId}?fs=1&amp;autoplay=1"><img src="{snippet.thumbnails.default.url}"></img></a>
+          </div>
+          <div class="video-description">
+            <a class="video-autoplay" title="{snippet.title}" href="http://www.youtube.com/v/{id.videoId}?fs=1&amp;autoplay=1"><strong>{snippet.title}</strong></a>
+            <br/>
+
+            <ul class="video-meta">
+              <li>
+                <small>
+                  by <a class="video-channel-link" href="http://www.youtube.com/channel/{snippet.channelId}" target="_blank"><strong>{snippet.channelTitle}</strong></a>
+                </small>
+              </li>
+              <li>
+                <small>{snippet.publishedAt|fromNow}</small>
+              </li>
+            </ul>
+
+            <p>
+              <small>{snippet.description}</small>
+            </p>
+          </div>
+          <div class="video-selection">
+            <span class="video-selected-mark">&#10004; Selected</span>
+            <span class="video-selected-prompt">Click To Select</span>
+          </div>
+        </div>
+      {:else}
+        No video found. Please refine your search and try again.
+      {/items}  
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dustjs-linkedin/2.0.0/dust-full.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    
+    <script src="js/bj.youtubesearch.driver.js"></script>
+    <script src="js/bj.youtubesearch.dustview.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      var googleApiClientReady = function() {
+        gapi.client.load('youtube', 'v3', function() {
+          if (typeof onYouTubeLoaded !== 'undefined') {
+            onYouTubeLoaded();
+          }
+        });
+      }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>    
+  </body>
+</html>
