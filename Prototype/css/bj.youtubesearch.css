@@ -1,0 +1,84 @@
+.video-main { width: 650px; }
+
+#search-query {
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pager {
+    display: none; /* search results view function will enable it */
+}
+
+.video-results {
+    display: table;
+    width: 100%;
+}
+
+.video-result {
+    display: table-row;
+    cursor: pointer;
+    height: 100px;
+}
+
+.video-result:hover { background-color: #F5F5F5; }
+
+.video-result.selected:hover { background-color: #dff0d8; }
+
+.video-thumbnail, .video-description, .video-selection {
+    display: table-cell;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.video-thumbnail, .video-selection { width: 120px; }
+
+.video-description { vertical-align: top; }
+
+.video-description p {
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.video-selection {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.video-selected-mark {
+    color: #468847;
+    display: none;
+    white-space: nowrap;
+}
+
+.video-selected-mark.selected { display: block; }
+
+.selected { background-color: #dff0d8; }
+
+.video-selected-prompt {
+    color: #999;
+    display: none;
+    white-space: nowrap;
+}
+
+.video-result:hover .video-selected-prompt { display: block; }
+
+.video-result.selected:hover .video-selected-prompt { display: none; }
+
+a.video-channel-link { color: #222; }
+
+ul.video-meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.video-meta li { display: inline-block; }
+
+ul.video-meta li:before {
+    content: '\002022';
+    color: #999;
+    margin: 0 5px;
+}
+
+ul.video-meta li:first-child:before { display: none; }
