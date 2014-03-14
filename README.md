@@ -1,6 +1,4 @@
-YouTube Video Picker for Sitecore
-=================================
+YouTube Video Picker Field for Sitecore 
+=======================================
 
-A custom Field Type for Sitecore with support for Content Editor and Page Editor.
-
-[Learn More](ttp://jockstothecore.com/youtube-video-picker-part-1-introduction)
+Custom field type for Sitecore with seamless support for both Content and Page Editor as described in the series of blog posts here http://jockstothecore.com/youtube-video-picker-part-1-introduction

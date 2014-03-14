@@ -24,6 +24,7 @@
         <li class="next disabled"><a href="#">More &rarr;</a></li>
       </ul> 
 
+     
       <div class="video-results" id="results">
         <!-- video-results-template will render here -->
       </div>
@@ -77,17 +78,6 @@
     
     <script src="js/bj.youtubesearch.driver.js"></script>
     <script src="js/bj.youtubesearch.dustview.js"></script>
-    <script src="js/main.js"></script>
-
-    <script type="text/javascript">
-      var googleApiClientReady = function() {
-        gapi.client.load('youtube', 'v3', function() {
-          if (typeof onYouTubeLoaded !== 'undefined') {
-            onYouTubeLoaded();
-          }
-        });
-      }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>    
+    <script src="js/main.js"></script> 
   </body>
 </html>
