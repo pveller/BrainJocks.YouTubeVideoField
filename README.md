@@ -1,5 +1,7 @@
 # YouTube Video Picker Field for Sitecore 
 
+Also avaialble [in the Sitecore Marketplace](http://marketplace.sitecore.net/en/Modules/YouTube_Video_Picker_Field.aspx)
+
 Building a custom field type in Sitecore with support for Content and Page Editor isn’t particularly hard. Specifically, for a “picker” field you would need:
 
 * New field type definition in the `core` database
