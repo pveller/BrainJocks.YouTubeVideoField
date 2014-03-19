@@ -1,2 +1,17 @@
 .DS_Store
 node_modules
+BuiltFiles_*.txt
+CopiedFiles_*.txt
+DeployedFiles_*.txt
+*.TDS.*/Package_*
+*.TDS.*/Debug/
+*.TDS.*/Release/
+*.TDS.*/Sandbox/
+/sandbox/
+*.user
+*.suo
+bin/
+obj/
+/packages/
+*.ncrunchsolution
+*.ncrunchproject

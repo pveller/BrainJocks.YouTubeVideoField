@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainJocks.YouTube.Custom", "BrainJocks.YouTube.Custom\BrainJocks.YouTube.Custom.csproj", "{77FD7A64-3D41-4644-842A-ED9C74572CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainJocks.YouTube.Environment", "BrainJocks.YouTube.Environment\BrainJocks.YouTube.Environment.csproj", "{3F188870-09B0-499B-8107-4F8BBF010D33}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "BrainJocks.YouTube.TDS.Core", "BrainJocks.YouTube.TDS.Core\BrainJocks.YouTube.TDS.Core.scproj", "{53AC25A0-DB71-4853-8AD7-26520FAD62A0}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "BrainJocks.YouTube.TDS.Master", "BrainJocks.YouTube.TDS.Master\BrainJocks.YouTube.TDS.Master.scproj", "{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "BrainJocks.YouTube.TDS.Master.Content", "BrainJocks.YouTube.TDS.Master.Content\BrainJocks.YouTube.TDS.Master.Content.scproj", "{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainJocks.YouTube.Web", "BrainJocks.YouTube.Web\BrainJocks.YouTube.Web.csproj", "{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Sandbox|Any CPU = Sandbox|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{77FD7A64-3D41-4644-842A-ED9C74572CEE}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{3F188870-09B0-499B-8107-4F8BBF010D33}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Debug|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Debug|Any CPU.Build.0 = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Debug|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+		{53AC25A0-DB71-4853-8AD7-26520FAD62A0}.Sandbox|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Debug|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Debug|Any CPU.Build.0 = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Debug|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+		{DE3AB261-F7CE-428A-8BA1-A2BDE6820543}.Sandbox|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Debug|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Debug|Any CPU.Build.0 = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Debug|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+		{D6FF163E-EA70-4D4E-89C1-5D4BF24BDEF7}.Sandbox|Any CPU.Deploy.0 = Sandbox|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Sandbox|Any CPU.ActiveCfg = Sandbox|Any CPU
+		{52FB88FE-BE5D-4C31-AAEC-666F1C9EE24E}.Sandbox|Any CPU.Build.0 = Sandbox|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

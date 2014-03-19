@@ -1,0 +1,158 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>53ac25a0-db71-4853-8ad7-26520fad62a0</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SourceWebPhysicalPath>..\BrainJocks.YouTube.Web</SourceWebPhysicalPath>
+    <SourceWebProject>{52fb88fe-be5d-4c31-aaec-666f1c9ee24e}|BrainJocks.YouTube.Web\BrainJocks.YouTube.Web.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/BrainJocks.YouTube.Web.csproj</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>BrainJocks.YouTube.TDS.Core</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>BrainJocks.YouTube.TDS.Core</AssemblyName>
+    <Name>BrainJocks.YouTube.TDS.Core</Name>
+    <RootNamespace>BrainJocks.YouTube.TDS.Core</RootNamespace>
+    <SitecoreDatabase>core</SitecoreDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageAuthor>BrainJocks</PackageAuthor>
+    <PackagePublisher>BrainJocks</PackagePublisher>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageReadme>YouTube Video picker Field Type with support for Content Editor and Page Editor</PackageReadme>
+    <SitecoreAssemblyPath>..\Libs\Sitecore</SitecoreAssemblyPath>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Sandbox' ">
+    <DebugSymbols>false</DebugSymbols>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageAuthor>
+    </PackageAuthor>
+    <PackagePublisher>
+    </PackagePublisher>
+    <PackageVersion>
+    </PackageVersion>
+    <PackageReadme>
+    </PackageReadme>
+    <SitecoreAssemblyPath>..\Libs\Sitecore</SitecoreAssemblyPath>
+    <GeneratePackage>False</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <OutputPath>.\Sandbox\</OutputPath>
+    <SitecoreDeployFolder>..\sandbox\Website</SitecoreDeployFolder>
+    <SitecoreWebUrl>http://youtubefield</SitecoreWebUrl>
+    <SitecoreAccessGuid>d030402f-e556-4f98-9651-767b9893a215</SitecoreAccessGuid>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Sandbox' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\system.item">
+      <Icon>/temp/IconCache/People/16x16/workstation1.png</Icon>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types.item">
+      <Icon>/temp/IconCache/Applications/16x16/form_blue.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo.item">
+      <Icon>/temp/IconCache/Multimedia/16x16/play_blue.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo\Menu.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo\Menu\Clear.item">
+      <Icon>/~/icon/Applications/32x32/Document.png.aspx</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo\Menu\Select.item">
+      <Icon>/temp/IconCache/Applications/32x32/Document.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo\Webedit Buttons.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Field types\Simple Types\YouTubeVideo\Webedit Buttons\Edit Video.item">
+      <Icon>/~/icon/Applications/32x32/bullet_ball_glass_green.png.aspx</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Antlr3.Runtime.dll" />
+    <ExcludedAssemblies Include="Lucene.%2a" />
+    <ExcludedAssemblies Include="Microsoft.Web.Infrastructure.dll" />
+    <ExcludedAssemblies Include="Newtonsoft.Json.%2a" />
+    <ExcludedAssemblies Include="BrainJocks.YouTube.Environment.%2a" />
+    <ExcludedAssemblies Include="Sitecore.%2a" />
+    <ExcludedAssemblies Include="System.Web.Helpers.dll" />
+    <ExcludedAssemblies Include="System.Web.Helpers.xml" />
+    <ExcludedAssemblies Include="System.Web.Mvc.dll" />
+    <ExcludedAssemblies Include="System.Web.Mvc.xml" />
+    <ExcludedAssemblies Include="System.Web.Providers.dll" />
+    <ExcludedAssemblies Include="System.Web.Razor.dll" />
+    <ExcludedAssemblies Include="System.Web.Razor.xml" />
+    <ExcludedAssemblies Include="System.Web.Routing.dll" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Deployment.dll" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Deployment.xml" />
+    <ExcludedAssemblies Include="System.Web.WebPages.dll" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Razor.dll" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Razor.xml" />
+    <ExcludedAssemblies Include="System.Web.WebPages.xml" />
+    <ExcludedAssemblies Include="Telerik.%2a" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
+</Project>

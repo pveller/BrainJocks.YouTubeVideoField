@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+         xmlns:scorecontrols="http://www.brainjocks.com/scorecontrols">
+  <SelectYouTubeVideo>
+    <FormDialog Header="Select YouTube Video" Text="Select YouTube Video" OKButton="OK">
+      <CodeBeside Type="BrainJocks.YouTube.Web.XmlControls.SelectYouTubeVideo, BrainJocks.YouTube.Web" />
+
+      <Script Src="/sitecore/shell/Controls/Lib/jQuery/jquery.noconflict.js" Type="text/javascript" />
+
+      <Script Src="http://cdnjs.cloudflare.com/ajax/libs/dustjs-linkedin/2.0.0/dust-full.min.js" Type="text/javascript"/>
+      <Script Src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"  Type="text/javascript"/>
+      <Script Src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"  Type="text/javascript"/>
+     
+      <Script Src="/sitecore modules/BrainJocks/resources/brainjocks.youtubesearch.driver.js" Type="text/javascript" />
+      <Script Src="/sitecore modules/BrainJocks/resources/brainjocks.youtubesearch.dustview.js" Type="text/javascript" />
+      
+      <Stylesheet Type="text/css" Src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"/>
+      <Stylesheet Type="text/css" Src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css"/>
+      
+      <Stylesheet Type="text/css" Src="/sitecore modules/BrainJocks/resources/brainjocks.youtubesearch.css" />
+
+      <Edit ID="RawValue" Class="" Hidden="True" runat="server" />
+      
+      <Border Padding="0 0 5 0" Height="100%">
+        <div class="container control">
+          <div id="SelectedValue" class="video-results">
+            <span></span>
+          </div>
+          
+          <div class="well" style="vertical-align: top">
+            <input id="SearchQuery" type="text" class="form-control" placeholder="Search"/>
+            <button id="SearchButton" disabled="true" class="btn btn-default">Search</button>
+          </div>
+          
+          <ul class="pager _one">
+            <li class="previous disabled">
+              <a href="#">&#8592; Less</a>
+            </li>
+            <li class="next disabled">
+              <a href="#">More &#8594;</a>
+            </li>
+          </ul>
+          
+          <div id="Results" class="video-results">
+            <p>
+              The results of your search will appear here.
+            </p>
+            <p>
+              You will be able to preview and select the video you like.
+            </p>
+          </div>
+
+          <ul class="pager _two">
+            <li class="previous disabled">
+              <a href="#">&#8592; Less</a>
+            </li>
+            <li class="next disabled">
+              <a href="#">More &#8594;</a>
+            </li>
+          </ul>
+          
+        </div>
+
+        <script id="VideoResultsTemplate" type="dust/template">
+          {#items}
+            <div class="video-result {id.videoId}" data-id="{id.videoId}">
+              <div class="video-thumbnail">
+                <a class="video-autoplay" title="{snippet.title}" href="http://www.youtube.com/v/{id.videoId}?fs=1&amp;autoplay=1"><img src="{snippet.thumbnails.default.url}"></img></a>
+              </div>
+              <div class="video-description">
+                <a class="video-autoplay" title="{snippet.title}" href="http://www.youtube.com/v/{id.videoId}?fs=1&amp;autoplay=1"><strong>{snippet.title}</strong></a>
+                <br/>
+
+                <ul class="video-meta">
+                  <li>
+                    <small>
+                      by <a class="channel-link" href="http://www.youtube.com/channel/{snippet.channelId}" target="_blank"><strong>{snippet.channelTitle}</strong></a>
+                    </small>
+                  </li>
+                  <li>
+                    <small>{snippet.publishedAt|published}</small>
+                  </li>
+                </ul>
+
+                <p>
+                  <small>{snippet.description}</small>
+                </p>
+              </div>
+              <div class="video-selection">
+                <span class="video-selected-mark">&#10004; Selected</span>
+                <span class="video-selected-prompt">Click To Select</span>
+              </div>
+            </div>
+          {:else}
+            No video found. Please refine your search and try again.
+          {/items}
+        </script>
+
+      </Border>
+    </FormDialog>
+
+
+    <Script Src="/sitecore modules/BrainJocks/resources/brainjocks.youtubesearch.init.js" Type="text/javascript"/>
+
+  </SelectYouTubeVideo>
+</control>
