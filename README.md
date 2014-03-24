@@ -25,8 +25,7 @@ It’s a fully workable solution. Feel free to use it in your project or explore
 
 The project uses [TDS](http://www.hhogdev.com/products/team-development-for-sitecore/overview.aspx) and is structured the way we structure all our Sitecore projects (more details here - [part 1](http://jockstothecore.com/setting-up-a-sitecore-solution-part-1-visual-studio-and-projects/), [part 2](http://jockstothecore.com/setting-up-a-sitecore-solution-part-2-tds-and-build-configurations/)). Once you pull it down please:
 
-* Copy your `Sitecore.Kernel`, `Sitecore.Client`, and `Sitecore.Mvc` into `./Libs/Sitecore` if you are building against something other than Sitecore 7 Update 2
-* Add your Google API license key into `BrainJocks.YouTube.Web/sitecore modules/BrainJocks/resources/brainjocks.youtubesearch.init.js`
+[More installation and configuration instructions](Release).
 
 # Use
 
