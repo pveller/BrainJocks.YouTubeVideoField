@@ -15,3 +15,6 @@ obj/
 /packages/
 *.ncrunchsolution
 *.ncrunchproject
+testvideopackage*/
+Libs/*.dll
+Libs/*/*.dll

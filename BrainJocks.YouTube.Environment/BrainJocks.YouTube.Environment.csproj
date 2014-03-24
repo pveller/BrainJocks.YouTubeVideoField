@@ -46,7 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ALL\App_Config\Include\BrainJocks.YouTube.ControlSources.config" />
+    <None Include="ALL\App_Config\Include\BrainJocks.YouTube.ControlSources.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ALL\App_Config\Include\BrainJocks.YouTube.FieldTypes.config" />
     <None Include="ALL\App_Config\Include\BrainJocks.YouTube.MenuCommands.config" />
     <None Include="ALL\App_Config\Include\BrainJocks.YouTube.Pipelines.config" />

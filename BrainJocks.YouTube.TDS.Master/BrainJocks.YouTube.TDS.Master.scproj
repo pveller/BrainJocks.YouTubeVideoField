@@ -6,12 +6,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>de3ab261-f7ce-428a-8ba1-a2bde6820543</ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <SourceWebPhysicalPath>
-    </SourceWebPhysicalPath>
-    <SourceWebProject>
-    </SourceWebProject>
-    <SourceWebVirtualPath>
-    </SourceWebVirtualPath>
+    <SourceWebPhysicalPath>..\BrainJocks.YouTube.Web</SourceWebPhysicalPath>
+    <SourceWebProject>{52fb88fe-be5d-4c31-aaec-666f1c9ee24e}|BrainJocks.YouTube.Web\BrainJocks.YouTube.Web.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/BrainJocks.YouTube.Web.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
     <UseMerge>true</UseMerge>
@@ -22,6 +19,7 @@
     <AssemblyName>BrainJocks.YouTube.TDS.Master</AssemblyName>
     <Name>BrainJocks.YouTube.TDS.Master</Name>
     <RootNamespace>BrainJocks.YouTube.TDS.Master</RootNamespace>
+    <SitecoreDatabase>master</SitecoreDatabase>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -65,6 +63,27 @@
       <Value>$(AssemblyVersion)</Value>
     </AssemblyAttributes>
   </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Sandbox' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Replacement Include="..\BrainJocks.YouTube.Environment\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
   <ItemGroup>
     <SitecoreItem Include="sitecore\layout.item">
       <Icon>/temp/IconCache/Applications/16x16/windows.png</Icon>
@@ -79,6 +98,7 @@
     <SitecoreItem Include="sitecore\layout\Layouts\Test Video Field Layout.item">
       <Icon>/temp/IconCache/Applications/32x32/window.png</Icon>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Placeholder Settings.item">
       <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
@@ -88,6 +108,7 @@
     <SitecoreItem Include="sitecore\layout\Placeholder Settings\Test Video Field.item">
       <Icon>/temp/IconCache/Business/16x16/table_selection_block.png</Icon>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings.item">
       <Icon>/temp/IconCache/Software/16x16/elements1.png</Icon>
@@ -102,6 +123,7 @@
     <SitecoreItem Include="sitecore\layout\Renderings\Sample\Test Video Field.item">
       <Icon>/temp/IconCache/Software/16x16/element.png</Icon>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates.item">
       <Icon>/temp/IconCache/Applications/16x16/form_blue.png</Icon>
@@ -148,6 +170,25 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Antlr3.Runtime.%2a" />
+    <ExcludedAssemblies Include="BrainJocks.YouTube.Environment.%2a" />
+    <ExcludedAssemblies Include="EntityFramework.%2a" />
+    <ExcludedAssemblies Include="Lucene.%2a" />
+    <ExcludedAssemblies Include="Microsoft.Web.Infrastructure.dll" />
+    <ExcludedAssemblies Include="Newtonsoft.Json.%2a" />
+    <ExcludedAssemblies Include="Sitecore.%2a" />
+    <ExcludedAssemblies Include="System.Web.Helpers.%2a" />
+    <ExcludedAssemblies Include="System.Web.Mvc.%2a" />
+    <ExcludedAssemblies Include="System.Web.Providers.dll" />
+    <ExcludedAssemblies Include="System.Web.Razor.%2a" />
+    <ExcludedAssemblies Include="System.Web.Routing.%2a" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Deployment.%2a" />
+    <ExcludedAssemblies Include="System.Web.WebPages.%2a" />
+    <ExcludedAssemblies Include="System.Web.WebPages.Razor.%2a" />
+    <ExcludedAssemblies Include="Telerik.%2a" />
+    <ExcludedAssemblies Include="WebGrease.%2a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
 </Project>
