@@ -19,7 +19,7 @@ It’s a fully workable solution. Feel free to use it in your project or explore
 * Part 1 - http://jockstothecore.com/youtube-video-picker-part-1-introduction/
 * Part 2 - http://jockstothecore.com/youtube-video-picker-part-2-prototype/
 * Part 3 - http://jockstothecore.com/youtube-video-picker-part-3-sitecore-citizenship/
-* Part 4 - coming up
+* Part 4 - http://jockstothecore.com/youtube-video-picker-part-4-xml-control/
 
 # Install
 
